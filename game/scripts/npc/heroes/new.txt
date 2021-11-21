@@ -1,0 +1,33 @@
+"DOTAHeroes"
+{
+	
+
+	"npc_arena_hero_saitama"
+	{
+		"DisabledInRanked"	"1"
+		"base_hero"	"npc_dota_hero_arena_base"
+		"Model"	"models/units/saitama/saitama.vmdl"
+		"ModelScale"	"1"
+		"Ability1"	"saitama_push_ups"
+		"Ability2"	"saitama_sit_ups"
+		"Ability3"	"saitama_squats"
+		"Ability4"	"saitama_jogging"
+		"Ability5"	"saitama_serious_punch"
+		"Ability6"	"saitama_limiter"
+		"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttackRange"			"80"
+		"AttackRate"			"2"
+		"AttributeBaseStrength"	"27"
+		"AttributeBaseIntelligence"	"14"
+		"AttributeBaseAgility"	"16"
+		"AttributeStrengthGain"	"3"
+		"AttributeIntelligenceGain"	"2.3"
+		"AttributeAgilityGain"	"2.2"
+		"AttackDamageMin"		"23"
+		"AttackDamageMax"		"30"
+		"MagicalResistance"		"40"
+	}
+
+	
+}

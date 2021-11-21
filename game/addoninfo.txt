@@ -1,0 +1,18 @@
+"AddonInfo"
+{
+	"TeamCount" "2"
+ 	"maps"      "boss_fight"
+  "penaltieenabled" 		"0"
+	"IsTemplate" 			"0"
+	"IsPlayable" 			"1"
+
+	"MaxPlayers" 			"10"
+		"background_map"		"scenes/darkmoon_hero_pick"
+
+  "boss_fight"
+  {
+          "MaxPlayers"                    "10"
+		"background_map"		"scenes/darkmoon_hero_pick"
+  }
+  
+}

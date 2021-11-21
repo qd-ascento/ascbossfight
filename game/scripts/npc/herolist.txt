@@ -1,0 +1,9 @@
+"CustomHeroList"
+{
+		
+
+		"npc_dota_hero_saitama"						"0"
+		"npc_dota_hero_johny"						"1"
+	
+
+}

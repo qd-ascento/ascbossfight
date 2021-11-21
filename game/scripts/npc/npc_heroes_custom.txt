@@ -1,0 +1,83 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+
+	
+
+	"npc_dota_hero_saitama"
+	{
+		"DisabledInRanked"	"0"
+		"BaseClass"					"npc_dota_hero"
+		//"override_hero"	"npc_dota_hero_arena_base"
+		"Model"						"models/units/saitama/saitama.vmdl"
+		"UnitLabel"         		"Saitama"
+		"Enabled"					"1"
+		"BotImplemented"			"0"
+		"NewHero"					"1"
+		"HeroID"					"253"
+		"ModelScale"				"1"
+		"Ability1"					"saitama_push_ups"
+		"Ability2"					"saitama_sit_ups"
+		"Ability3"					"saitama_squats"
+		"Ability4"					"saitama_jogging"
+		"Ability5"					"saitama_serious_punch"
+		"Ability6"					"saitama_limiter"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttackRange"				"120"
+		"AttackRate"				"1"
+		"AttackSpeed"				"200"
+		"AttributeBaseStrength"		"1"
+		"AttributeBaseIntelligence"	"1"
+		"AttributeBaseAgility"		"1"
+		"AttributeStrengthGain"		"1"
+		"AttributeIntelligenceGain"	"1"
+		"AttributeAgilityGain"		"1"
+		"AttackDamageMin"			"1"
+		"AttackDamageMax"			"1"
+		"MagicalResistance"			"10"
+		"StatusHealth" 				"5" // Base health.
+		"StatusHealthRegen"			"0" // Health regeneration rate.
+		"StatusMana" 				"200" // Base mana.
+		"StatusManaRegen" 			"5" // Mana regeneration rate.
+	}
+
+
+
+	"npc_dota_hero_johny"
+	{
+		"BaseClass"					"npc_dota_hero"
+		//"override_hero"	"npc_dota_hero_arena_base"
+		"Model"						"models/creeps/lane_creeps/ti9_chameleon_radiant/ti9_chameleon_radiant_melee_mega.vmdl"
+		"UnitLabel"         		"Johny"
+		"Enabled"					"1"
+		"BotImplemented"			"0"
+		"NewHero"					"1"
+		"HeroID"					"252"
+		"ModelScale"				"1.2"
+		"Ability1"					"golden_boss"			// Ability 1
+		//"Ability2"					"up_str"
+		
+		//"Ability6"					"saitama_limiter"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttackRange"				"120"
+		"AttackRate"				"1"
+		"AttackSpeed"				"200"
+		"AttributeBaseStrength"		"1"
+		"AttributeBaseIntelligence"	"1"
+		"AttributeBaseAgility"		"1"
+		"AttributeStrengthGain"		"1"
+		"AttributeIntelligenceGain"	"1"
+		"AttributeAgilityGain"		"1"
+		"AttackDamageMin"			"1"
+		"AttackDamageMax"			"1"
+		"MagicalResistance"			"10"
+		"StatusHealth" 				"10" // Base health.
+		"StatusHealthRegen"			"0" // Health regeneration rate.
+		"StatusMana" 				"200" // Base mana.
+		"StatusManaRegen" 			"5" // Mana regeneration rate.
+	}
+}

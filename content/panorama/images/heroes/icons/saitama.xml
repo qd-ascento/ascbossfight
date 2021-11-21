@@ -1,0 +1,5 @@
+<root>
+<Panel class="AddonLoadingRoot">
+<Image id="gamemode" class="SeqImg" src="file://{images}/heroes/icons/npc_dota_hero_saitama.png" />
+</Panel>
+</root>

@@ -1,0 +1,176 @@
+#base "heroes/saitama.txt"
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+
+"golden_boss"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"heroes/boss/golden_boss.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityTextureName"			"alchemist/power_of_gold"
+
+	"MaxLevel"						"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"              "FIELD_FLOAT"
+			"gold"          "1"
+		}
+	}
+}
+
+
+	"johny_book"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/boss/golden_boss.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+		"AbilityTextureName" 			"rubick_empty1"
+	}
+
+"exp_boss"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"heroes/boss/exp_boss.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"books/shard_level"
+
+
+	"MaxLevel"						"1"
+
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"              "FIELD_FLOAT"
+			"exp"          "1"
+		}
+	}
+
+}
+
+
+
+"up_str"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"items/items_shards.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityTextureName"			"books/shard_str_small"
+
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+
+	"AbilityCastRange"				"0"
+	"MaxLevel"						"1"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"              "FIELD_INTEGER"
+			"strength"          "1"
+		}
+				"02"
+		{
+			"var_type"              "FIELD_INTEGER"
+			"cost"          "100"
+		}
+	}
+
+
+}
+
+"up_agi"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"items/items_shards.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityTextureName"			"books/shard_agi_small"
+
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+
+	"AbilityCastRange"				"0"
+	"MaxLevel"						"1"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"              "FIELD_INTEGER"
+			"agility"          "1"
+		}
+				"02"
+		{
+			"var_type"              "FIELD_INTEGER"
+			"cost"          "100"
+		}
+	}
+
+
+}
+
+"up_int"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"items/items_shards.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityTextureName"			"books/shard_int_small"
+
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+
+	"AbilityCastRange"				"0"
+	"MaxLevel"						"1"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"              "FIELD_INTEGER"
+			"intelligence"          "1"
+		}
+				"02"
+		{
+			"var_type"              "FIELD_INTEGER"
+			"cost"          "100"
+		}
+	}
+
+
+}
+
+
+
+
+
+
+}

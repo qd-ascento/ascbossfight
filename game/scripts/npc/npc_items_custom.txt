@@ -1,0 +1,45 @@
+
+"DOTAAbilities"
+{
+"item_recipe_helm_of_the_dominator"			"REMOVED"
+"item_helm_of_the_dominator" 				"REMOVED"
+"item_recipe_helm_of_the_overlord" 			"REMOVED"
+"item_helm_of_the_overlord" 				"REMOVED"
+"item_blink"								"REMOVED"
+"item_hand_of_midas"						"REMOVED"
+"item_force_staff"							"REMOVED"
+"item_recipe_force_staff"					"REMOVED"
+"item_recipe_hurricane_pike"				"REMOVED"
+"item_hurricane_pike"						"REMOVED"
+"item_recipe_manta"							"REMOVED"
+"item_manta"								"REMOVED"
+"item_super_blink"							"REMOVED"	
+"item_fallen_sky"							"REMOVED"	
+"item_overwhelming_blink"					"REMOVED"	
+"item_swift_blink"							"REMOVED"	
+"item_arcane_blink"							"REMOVED"	
+"item_recipe_arcane_blink"					"REMOVED"	
+"item_recipe_swift_blink"					"REMOVED"	
+"item_recipe_overwhelming_blink"			"REMOVED"
+"item_wind_waker"							"REMOVED"
+"item_recipe_wind_waker"					"REMOVED"
+"item_smoke_of_deceit"						"REMOVED"
+"item_mango"								"REMOVED"
+"item_clarity"								"REMOVED"
+"item_enchanted_mango"						"REMOVED"
+"item_flask"								"REMOVED"
+"item_smoke_of_deceit"						"REMOVED"
+"item_dust"									"REMOVED"
+"item_bottle"								"REMOVED"
+
+
+
+
+
+
+
+
+
+
+
+}
