@@ -9,6 +9,7 @@
 		"npc_boss1"												"Первый босс"
 		"npc_boss2"												"Второй босс"
 		"DOTA_Tooltip_ability_golden_boss"						"Боевой опыт"
+		"DOTA_Tooltip_ability_golden_boss_Note0"						"Тут должно было быть что-то полезное, но пока что не завезли."
 		"DOTA_Tooltip_ability_golden_boss_Description"			"Каждая единица нанесенного урона принесет 1 боевое очко <br><br>Но не более 100 очков за удар"
 		"DOTA_Tooltip_ability_golden_boss_gold"					"Даёт очков:"
 		"DOTA_Tooltip_modifier_golden_boss"					"Очков боевого опыта"
@@ -32,50 +33,17 @@
 		"DOTA_Tooltip_ability_up_int_Description"						"Увеличивает интеллект на 1 ед."
 		"DOTA_Tooltip_ability_up_int_cost"					"Стоимость: "
 
-		"DOTA_Tooltip_ability_item_shard_of_true_sight"					"Shard of True Sight"
-		"DOTA_Tooltip_ability_item_shard_of_true_sight_Description"		"<h1>Активируемая: Поглотить</h1> Поглощает предмет и дает владельцу и его союзникам возможность видеть невидимых существ и варды в определенном радиусе. При смерти эффект будет потерян."
-		"DOTA_Tooltip_ability_item_shard_of_true_sight_radius"			"РАДИУС:"
-		"DOTA_Tooltip_modifier_shard_of_true_sight"						"Shard of True Sight"
-		"DOTA_Tooltip_modifier_shard_of_true_sight_Description"			"Дает возможность видеть невидимых существ и варды. Эффект пропадает при смерти."
-		"DOTA_Tooltip_ability_item_shard_str_small"						"Книга силы x15"
-		"DOTA_Tooltip_ability_item_shard_str_small_Description"			"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %strength% силы."
-		"DOTA_Tooltip_ability_item_shard_str_medium"					"Книга силы x50"
-		"DOTA_Tooltip_ability_item_shard_str_medium_Description"		"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %strength% силы."
-		"DOTA_Tooltip_ability_item_shard_str_large"						"Книга силы x100"
-		"DOTA_Tooltip_ability_item_shard_str_large_Description"			"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %strength% силы."
-		"DOTA_Tooltip_ability_item_shard_str_extreme"					"Книга силы x300"
-		"DOTA_Tooltip_ability_item_shard_str_extreme_Description"		"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %strength% силы."
-		"DOTA_Tooltip_ability_item_shard_agi_small"						"Книга ловкости x15"
-		"DOTA_Tooltip_ability_item_shard_agi_small_Description"			"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %agility% ловкости."
-		"DOTA_Tooltip_ability_item_shard_agi_medium"					"Книга ловкости x50"
-		"DOTA_Tooltip_ability_item_shard_agi_medium_Description"		"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %agility% ловкости."
-		"DOTA_Tooltip_ability_item_shard_agi_large"						"Книга ловкости x100"
-		"DOTA_Tooltip_ability_item_shard_agi_large_Description"			"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %agility% ловкости."
-		"DOTA_Tooltip_ability_item_shard_agi_extreme"					"Книга ловкости x300"
-		"DOTA_Tooltip_ability_item_shard_agi_extreme_Description"		"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %agility% ловкости."
-		"DOTA_Tooltip_ability_item_shard_int_small"						"Книга интеллекта x15"
-		"DOTA_Tooltip_ability_item_shard_int_small_Description"			"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %intelligence% интеллекта."
-		"DOTA_Tooltip_ability_item_shard_int_medium"					"Книга интеллекта x50"
-		"DOTA_Tooltip_ability_item_shard_int_medium_Description"		"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %intelligence% интеллекта."
-		"DOTA_Tooltip_ability_item_shard_int_large"						"Книга интеллектаx100"
-		"DOTA_Tooltip_ability_item_shard_int_large_Description"			"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %intelligence% интеллекта."
-		"DOTA_Tooltip_ability_item_shard_int_extreme"					"Книга интеллектаx300"
-		"DOTA_Tooltip_ability_item_shard_int_extreme_Description"		"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %intelligence% интеллекта."
-		"DOTA_Tooltip_ability_item_shard_level"							"Книга уровня x1"
-		"DOTA_Tooltip_ability_item_shard_level_Description"				"<h1>Активируемая: Поглотить</h1> Поглощает предмет и увеличивает уровень вашего героя на %levels%."
-		"DOTA_Tooltip_ability_item_shard_level10"						"Книга уровня x10"
-		"DOTA_Tooltip_ability_item_shard_level10_Description"			"<h1>Активируемая: Поглотить</h1> Поглощает предмет и увеличивает уровень вашего героя на %levels%."
-		"DOTA_Tooltip_ability_item_shard_attackspeed"					"Книга скорости x55"
-		"DOTA_Tooltip_ability_item_shard_attackspeed_Description"		"<h1>Использование: Поглотить</h1> Поглощает предмет и навсегда дает герою %attackspeed% скорости атаки."
-
-
-
-
-
 
 
 		"npc_dota_hero_johny"				"Крип-крипочек"
 		"npc_dota_hero_johny_npedesc1"		"Крип - смелый крип-крипочек, идёт напролом защищая своих близких глядя страху в лицо."
+
+		"npc_dota_hero_bob"				"Боб"
+		"npc_dota_hero_bob_npedesc1"		"Однажды он был простым лесным крипом, но обрел разум и начал развиваться. Надежный защитник для своей команды."
+
+
+		"npc_dota_hero_jane"				"Джейн"
+		"npc_dota_hero_jane_npedesc1"		"Джейн была рождена, чтобы помогать своим товарищам. После позорного поражения от рук героев - она переродилась и с новыми силами готова свергнуть богов вместе со своей командой."
 
 
 		"npc_dota_hero_saitama"										"Saitama"
@@ -105,5 +73,33 @@
 		"Dota_Tooltip_ability_saitama_limiter_bonus_strength_pct"						"%ПРОЦЕНТ СИЛЫ:"
 		"Dota_Tooltip_modifier_saitama_limiter_Description"								"Сайтама получает стаки за тренировки и убийство вражеских героев. Каждый стак лимитера усиливает эффект способностей Limiter и Serious Punch"
 
+
+
+		"DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven"	"Аура урона"
+		"DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven_Description"	"Герой увеличивает урон союзников и уменьшает урон врагов."
+		"DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven_bonus_damage_pct"	"Урон союзников %:"
+		"DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven_aura_radius"	"Радиус:"
+		"DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven_negative_damage_pct"	"Урон врагов %:"
+
+		"DOTA_Tooltip_ability_shallow_grave_datadriven"	"Крест"
+		"DOTA_Tooltip_ability_shallow_grave_datadriven_Description"	"Вешает крест на союзных героев не позволяя им умереть некоторое время."
+		"DOTA_Tooltip_ability_shallow_grave_datadriven_duration_tooltip"	"Длительность:"
+		"DOTA_Tooltip_ability_shallow_grave_datadriven_range_tooltip"	"Дальность:"
+
+
+		"DOTA_Tooltip_ability_empower_datadriven"	"Молот"
+		"DOTA_Tooltip_ability_empower_datadriven_Description"	"Однажды на поле боя Джейн нашла молот Магнуса, поделитесь им с союзниками, чтобы увеличить их урон и дать возможность атаковать по области."
+		"DOTA_Tooltip_ability_empower_datadriven_bonus_damage_pct"	"Доп урон %:"
+		"DOTA_Tooltip_ability_empower_datadriven_cleave_damage_pct"	"Сплеш %:"
+
+
+		"DOTA_Tooltip_ability_voodoo_restoration_datadriven"	"Лечилка"
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_Description"	"Герой направляет свои чары на лечение ближайших союзников."
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_Lore"	"Фокусы Жарвакко могут не только околдовать врагов, но и исцелить от различных болезней."
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_Note0"	"Лечение происходит каждые 0,33 секунды."
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_Note1"	"Лечит союзников, невосприимчивых к магии."
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_mana_per_second"	"МАНЫ В СЕКУНДУ:"
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_heal"	"ЛЕЧЕНИЕ:"
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_radius"	"РАДИУС:"
 	}
 }

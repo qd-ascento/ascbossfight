@@ -48,8 +48,8 @@
 
     // Armor
     //----------------------------------------------------------------
-    "ArmorPhysical"       "0"     // Physical protection.
-    "MagicalResistance"       "0"     // Magical protection.
+    "ArmorPhysical"       "1000"     // Physical protection.
+    "MagicalResistance"       "100"     // Magical protection.
 
     // Attack
     //----------------------------------------------------------------
@@ -63,8 +63,8 @@
     "AttackRange"       "500"   // Range within a target can be attacked.
     "ProjectileModel"     "" // Particle system model for projectile.
     "ProjectileSpeed"     "900"   // Speed of projectile.
-    "StatusHealth"				"500000"		// Base health.
-	"StatusHealthRegen"			"1000"		// Health regeneration rate.
+    "StatusHealth"				"1000000"		// Base health.
+	"StatusHealthRegen"			"50000"		// Health regeneration rate.
 
 
     // Bounty

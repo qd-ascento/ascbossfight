@@ -4,6 +4,8 @@
 
 		"npc_dota_hero_saitama"						"0"
 		"npc_dota_hero_johny"						"1"
+		"npc_dota_hero_bob"						"1"
+		"npc_dota_hero_jane"						"1"
 	
 
 }

@@ -64,7 +64,9 @@ function Spawn:OnEntityKilled( keys )
 		local caster_respoint = Entities:FindByName(nil,"spawner_boss_2"):GetAbsOrigin() --Пробиваем адрес дома
 		Timers:CreateTimer(1, function()              --Через сколько секунд появится новый фраер(5)
   		    local unit = CreateUnitByName(name, caster_respoint + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS) --создаем нового пацыка по трем аргументам ( имя покойного ,адрес дома ,true,nil,nil,команда терпилы)
-
+  		    
+        GameRules:SetSafeToLeave( true )
+        GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
   	    end)
 
 	end
