@@ -50,6 +50,7 @@
 	{
 		"BaseClass"					"npc_dota_hero"
 		//"override_hero"	"npc_dota_hero_arena_base"
+		//models/creeps/lane_creeps/ti9_chameleon_radiant/ti9_chameleon_radiant_melee_mega.vmdl
 		"Model"						"models/creeps/lane_creeps/ti9_chameleon_radiant/ti9_chameleon_radiant_melee_mega.vmdl"
 		"UnitLabel"         		"Johny"
 		"Enabled"					"1"
@@ -90,6 +91,52 @@
 		"StatusManaRegen" 			"1" // Mana regeneration rate.
 	}
 
+
+	"npc_dota_hero_may"
+	{
+		"BaseClass"					"npc_dota_hero"
+		//"override_hero"	"npc_dota_hero_arena_base"
+		//models/units/zombie/phychozomb.vmdl
+		//models/creeps/lane_creeps/ti9_chameleon_radiant/ti9_chameleon_radiant_melee_mega.vmdl
+		"Model"						"models/units/may/may.vmdl"
+		"UnitLabel"         		"May"
+		"Enabled"					"1"
+		"SoundSet"					"n_creep_Ranged"
+		"BotImplemented"			"0"
+		"NewHero"					"1"
+		"HeroID"					"249"
+		"ModelScale"				"1.2"
+		"Ability1"					"golden_boss"			// Ability 1
+		"Ability10"		"special_bonus_exp_boost_20"
+		"Ability11"		"special_bonus_movement_speed_35"
+		"Ability12"		"special_bonus_cleave_15"
+		"Ability13"		"special_bonus_attack_damage_30"
+		"Ability14"		"special_bonus_all_stats_10"
+		"Ability15"		"special_bonus_agility_25"
+		"Ability16"		"special_bonus_all_stats_15"
+		"Ability17"		"special_bonus_agility_40"
+		//"Ability2"					"up_str"
+		
+		//"Ability6"					"saitama_limiter"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttackRange"				"120"
+		"AttackRate"				"1"
+		"AttackSpeed"				"200"
+		"AttributeBaseStrength"		"0"
+		"AttributeBaseIntelligence"	"0"
+		"AttributeBaseAgility"		"1"
+		"AttributeStrengthGain"		"1"
+		"AttributeIntelligenceGain"	"1"
+		"AttributeAgilityGain"		"1"
+		"AttackDamageMin"			"1"
+		"AttackDamageMax"			"1"
+		"MagicalResistance"			"0"
+		"StatusHealth" 				"10" // Base health.
+		"StatusHealthRegen"			"0" // Health regeneration rate.
+		"StatusMana" 				"100" // Base mana.
+		"StatusManaRegen" 			"1" // Mana regeneration rate.
+	}
 //models/creeps/neutral_creeps/n_creep_ogre_med/n_creep_ogre_med.vmdl
 	"npc_dota_hero_bob"
 	{

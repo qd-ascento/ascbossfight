@@ -6,6 +6,7 @@
 		"npc_dota_hero_johny"						"1"
 		"npc_dota_hero_bob"						"1"
 		"npc_dota_hero_jane"						"1"
+		"npc_dota_hero_may"						"1"
 	
 
 }
