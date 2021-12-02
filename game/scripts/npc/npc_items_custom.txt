@@ -124,9 +124,11 @@
 		}
 	}
 
+
 	"item_teleport_boss1"
 	{
-		"ID"							"1000"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/items_teleports.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"0"
@@ -136,9 +138,10 @@
 		"Model"							"models/props_gameplay/tpscroll01.vmdl"
 	}
 
-	"teleport_boss1"
+	"item_teleport_boss2"
 	{
-		"ID"							"1000"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/items_teleports.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"0"
@@ -147,9 +150,11 @@
 		"AbilityTextureName"			"item_tpscroll"
 		"Model"							"models/props_gameplay/tpscroll01.vmdl"
 	}
-	"teleport_boss2"
+
+	"item_teleport_boss3"
 	{
-		"ID"							"1001"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/items_teleports.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"0"
@@ -158,9 +163,11 @@
 		"AbilityTextureName"			"item_tpscroll"
 		"Model"							"models/props_gameplay/tpscroll01.vmdl"
 	}
-	"teleport_boss3"
+
+	"item_teleport_boss4"
 	{
-		"ID"							"1002"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/items_teleports.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"0"
@@ -169,9 +176,11 @@
 		"AbilityTextureName"			"item_tpscroll"
 		"Model"							"models/props_gameplay/tpscroll01.vmdl"
 	}
-	"teleport_boss4"
+
+	"item_teleport_boss5"
 	{
-		"ID"							"1003"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/items_teleports.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"0"
@@ -180,9 +189,12 @@
 		"AbilityTextureName"			"item_tpscroll"
 		"Model"							"models/props_gameplay/tpscroll01.vmdl"
 	}
-	"teleport_boss5"
+
+
+		"item_teleport_spawn"
 	{
-		"ID"							"1004"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/items_teleports.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"0"
@@ -191,9 +203,11 @@
 		"AbilityTextureName"			"item_tpscroll"
 		"Model"							"models/props_gameplay/tpscroll01.vmdl"
 	}
-	"teleport_spawn"
+
+		"item_teleport_city"
 	{
-		"ID"							"1005"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/items_teleports.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"0"
@@ -202,17 +216,7 @@
 		"AbilityTextureName"			"item_tpscroll"
 		"Model"							"models/props_gameplay/tpscroll01.vmdl"
 	}
-	"teleport_city"
-	{
-		"ID"							"1006"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"AbilityTextureName"			"item_tpscroll"
-		"Model"							"models/props_gameplay/tpscroll01.vmdl"
-	}
 
 //=================================================================================================================
 	// Assault Cuirass

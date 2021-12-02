@@ -61,7 +61,7 @@ DONATE_ITEMS = {
 	heroes = {
 
 		{
-			name = "teleport_spawn",
+			name = "item_teleport_spawn",
 			can_be_bought = true,
 			free_available = true,
 			count = 1,
@@ -70,7 +70,7 @@ DONATE_ITEMS = {
 			},
 		},
 		{
-			name = "teleport_city",
+			name = "item_teleport_city",
 			can_be_bought = true,
 			free_available = true,
 			count = 1,
@@ -79,10 +79,13 @@ DONATE_ITEMS = {
 			},
 		},
 
+
+
 	},
 	artifacts = {
 
-			{
+
+				{
 			name = "item_teleport_boss1",
 			can_be_bought = true,
 			free_available = true,
@@ -91,18 +94,8 @@ DONATE_ITEMS = {
 				DONATE_ITEM_TELEPORT1,
 			},
 		},
-
-				{
-			name = "teleport_boss1",
-			can_be_bought = true,
-			free_available = true,
-			count = 1,
-			sets ={
-				DONATE_ITEM_TELEPORT1,
-			},
-		},
 		{
-			name = "teleport_boss2",
+			name = "item_teleport_boss2",
 			can_be_bought = true,
 			free_available = true,
 			count = 1,
@@ -111,7 +104,7 @@ DONATE_ITEMS = {
 			},
 		},
 		{
-			name = "teleport_boss3",
+			name = "item_teleport_boss3",
 			can_be_bought = true,
 			free_available = true,
 			count = 1,
@@ -120,7 +113,7 @@ DONATE_ITEMS = {
 			},
 		},
 		{
-			name = "teleport_boss4",
+			name = "item_teleport_boss4",
 			can_be_bought = true,
 			free_available = true,
 			count = 1,
@@ -129,7 +122,7 @@ DONATE_ITEMS = {
 			},
 		},
 		{
-			name = "teleport_boss5",
+			name = "item_teleport_boss5",
 			can_be_bought = true,
 			free_available = true,
 			count = 1,
@@ -213,8 +206,23 @@ function Donate:PlayerTake( info )
 					local hero = player:GetAssignedHero()
 					for ii = 0, 8 do
 						if not hero:GetItemInSlot( ii ) then
-
-   							local ent = Entities:FindByName( nil, i.name)
+							local tploc = i.name
+							if i.name == "item_teleport_boss1" then
+								tploc = "teleport_boss1"
+							elseif i.name == "item_teleport_boss2" then
+								tploc = "teleport_boss2"
+							elseif i.name == "item_teleport_boss3" then
+								tploc = "teleport_boss3"
+							elseif i.name == "item_teleport_boss4" then
+								tploc = "teleport_boss4"
+							elseif i.name == "item_teleport_boss5" then
+								tploc = "teleport_boss5"
+							elseif i.name == "item_teleport_spawn" then
+								tploc = "teleport_spawn"
+							elseif i.name == "item_teleport_city" then
+								tploc = "teleport_city"
+							end
+   							local ent = Entities:FindByName( nil, tploc)
    							local point = ent:GetAbsOrigin()
    							hero:SetAbsOrigin( point )
    							FindClearSpaceForUnit(hero, point, false)
@@ -242,7 +250,7 @@ end
 
 
 function Donate:OnNPCSpawned(keys)
-	print("[BAREBONES] NPC Spawned")
+	--print("[BAREBONES] NPC Spawned")
 --	DeepPrintTable(keys)
 	local npc = EntIndexToHScript(keys.entindex)
 	local name = npc:GetUnitName()
@@ -254,8 +262,8 @@ function Donate:OnNPCSpawned(keys)
 		--npc:AddItemByName("item_skull_of_midas")
 		local steamID = PlayerResource:GetSteamAccountID(playerID)
 		
-		print( "Steam Community ID: " .. tostring( steamID ) )
-		print( "Current Hero: " .. tostring( name ) )
+		--print( "Steam Community ID: " .. tostring( steamID ) )
+		--print( "Current Hero: " .. tostring( name ) )
 --	
 	
 		addModifierBySteamID(DONATE_SET_PREMIUM_1.players,"modifier_special_effect_legendary",steamID,npc)

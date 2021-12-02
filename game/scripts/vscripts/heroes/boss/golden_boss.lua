@@ -70,37 +70,35 @@ function modifier_golden_boss:OnAttackLanded(data)
 			parent:AddNewModifier(parent, self:GetAbility(), "modifier_golden_boss", nil)
 		end
 
-	if parent == attacker and attacker:IsRealHero() and not attacker:IsIllusion() and target:GetUnitName() == "npc_boss1" then
+			if parent == attacker and attacker:IsRealHero() and not attacker:IsIllusion() then
 
-		local gold_now = attacker:GetModifierStackCount("modifier_golden_boss", ability)
+				local gold_now = attacker:GetModifierStackCount("modifier_golden_boss", ability)
 
-			if gold_now < 500000 then
+				if gold_now < 500000 then
 
-				if goldDamage > 100 and target:GetUnitName() == "npc_boss1" then
+					if goldDamage > 100 and target:GetUnitName() == "npc_boss1" then
 
-					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 100)
+						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 100)
 
-				elseif goldDamage > 200 and target:GetUnitName() == "npc_boss2"
+						elseif goldDamage > 200 and target:GetUnitName() == "npc_boss2" then
 
-					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 200)
+						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 200)
 
-				elseif goldDamage > 300 and target:GetUnitName() == "npc_boss3"
+						elseif goldDamage > 300 and target:GetUnitName() == "npc_boss3" then
 
-					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 300)
+						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 300)
 
-				elseif goldDamage > 400 and target:GetUnitName() == "npc_boss4"
+						elseif goldDamage > 400 and target:GetUnitName() == "npc_boss4" then
 
-					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 400)
+						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 400)
 
-				elseif goldDamage > 500 and target:GetUnitName() == "npc_boss5"
+						elseif goldDamage > 500 and target:GetUnitName() == "npc_boss5" then
 
-					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
+						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
 
+					end	
 				end
-				--attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
-
 			end
-	end
 
 end
 

@@ -8,6 +8,9 @@
 
 		"npc_boss1"												"Первый босс"
 		"npc_boss2"												"Второй босс"
+		"npc_boss3"												"Третий босс"
+		"npc_boss4"												"Четвертый босс"
+		"npc_boss5"												"Пятый босс"
 		"DOTA_Tooltip_ability_golden_boss"						"Боевой опыт"
 		"DOTA_Tooltip_ability_golden_boss_Note0"						"Тут должно было быть что-то полезное, но пока что не завезли."
 		"DOTA_Tooltip_ability_golden_boss_Description"			"Каждая единица нанесенного урона принесет 1 боевое очко <br><br>Но не более 100 очков за удар"
@@ -34,6 +37,23 @@
 		"DOTA_Tooltip_ability_up_int_cost"					"Стоимость: "
 
 
+		"donate_list_name_artifacts"								"Телепорты на боссов"
+		"donate_list_name_heroes"								"Телепорт домой и в город"
+
+		"DOTA_Tooltip_ability_item_teleport_boss1"									"Телепорт босс 1"
+		"DOTA_Tooltip_ability_item_teleport_boss1_Description"					"Телепортирует вас в локацию первого босса"
+		"DOTA_Tooltip_ability_item_teleport_boss2"								"Телепорт босс 2"
+		"DOTA_Tooltip_ability_item_teleport_boss2_Description"					"Телепортирует вас в локацию второго босса"
+		"DOTA_Tooltip_ability_item_teleport_boss3"								"Телепорт босс 3"
+		"DOTA_Tooltip_ability_item_teleport_boss3_Description"					"Телепортирует вас в локацию третьего босса"
+		"DOTA_Tooltip_ability_item_teleport_boss4"								"Телепорт босс 4"
+		"DOTA_Tooltip_ability_item_teleport_boss4_Description"					"Телепортирует вас в локацию четвертого босса"
+		"DOTA_Tooltip_ability_item_teleport_boss5"								"Телепорт босс 5"
+		"DOTA_Tooltip_ability_item_teleport_boss5_Description"					"Телепортирует вас в локацию пятого (последнего) босса"
+		"DOTA_Tooltip_ability_item_teleport_spawn"								"Телепорт домой"
+		"DOTA_Tooltip_ability_item_teleport_spawn_Description"					"Телепортирует вас домой"
+		"DOTA_Tooltip_ability_item_teleport_city"									"Телепорт в город"
+		"DOTA_Tooltip_ability_item_teleport_city_Description"						"Телепортирует вас в город, где можно (будет) взять квесты и пофармить нейтральных крипов (для нейтральных шмоток офкорс)"
 
 		"npc_dota_hero_johny"				"Крип-крипочек"
 		"npc_dota_hero_johny_npedesc1"		"Крип - смелый крип-крипочек, идёт напролом защищая своих близких глядя страху в лицо."
