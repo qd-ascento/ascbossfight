@@ -51,7 +51,7 @@ function Spawn:OnEntityKilled( keys )
 
 
 		local caster_respoint = Entities:FindByName(nil,"spawner_boss_1"):GetAbsOrigin() --Пробиваем адрес дома
-		Timers:CreateTimer(1, function()              --Через сколько секунд появится новый фраер(5)
+		Timers:CreateTimer(10, function()              --Через сколько секунд появится новый фраер(5)
   		    local unit = CreateUnitByName(name, caster_respoint + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS) --создаем нового пацыка по трем аргументам ( имя покойного ,адрес дома ,true,nil,nil,команда терпилы)
 
   	    end)
@@ -62,11 +62,50 @@ function Spawn:OnEntityKilled( keys )
 
 
 		local caster_respoint = Entities:FindByName(nil,"spawner_boss_2"):GetAbsOrigin() --Пробиваем адрес дома
-		Timers:CreateTimer(1, function()              --Через сколько секунд появится новый фраер(5)
+		Timers:CreateTimer(10, function()              --Через сколько секунд появится новый фраер(5)
   		    local unit = CreateUnitByName(name, caster_respoint + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS) --создаем нового пацыка по трем аргументам ( имя покойного ,адрес дома ,true,nil,nil,команда терпилы)
   		    
-        GameRules:SetSafeToLeave( true )
-        GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+        --GameRules:SetSafeToLeave( true )
+        --GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+  	    end)
+
+	end
+
+		if name == "npc_boss3" then
+
+
+		local caster_respoint = Entities:FindByName(nil,"spawner_boss_3"):GetAbsOrigin() --Пробиваем адрес дома
+		Timers:CreateTimer(10, function()              --Через сколько секунд появится новый фраер(5)
+  		    local unit = CreateUnitByName(name, caster_respoint + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS) --создаем нового пацыка по трем аргументам ( имя покойного ,адрес дома ,true,nil,nil,команда терпилы)
+  		    
+        --GameRules:SetSafeToLeave( true )
+        --GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+  	    end)
+
+	end
+
+		if name == "npc_boss4" then
+
+
+		local caster_respoint = Entities:FindByName(nil,"spawner_boss_4"):GetAbsOrigin() --Пробиваем адрес дома
+		Timers:CreateTimer(10, function()              --Через сколько секунд появится новый фраер(5)
+  		    local unit = CreateUnitByName(name, caster_respoint + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS) --создаем нового пацыка по трем аргументам ( имя покойного ,адрес дома ,true,nil,nil,команда терпилы)
+  		    
+        --GameRules:SetSafeToLeave( true )
+        --GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+  	    end)
+
+	end
+
+		if name == "npc_boss5" then
+
+
+		local caster_respoint = Entities:FindByName(nil,"spawner_boss_5"):GetAbsOrigin() --Пробиваем адрес дома
+		Timers:CreateTimer(10, function()              --Через сколько секунд появится новый фраер(5)
+  		    local unit = CreateUnitByName(name, caster_respoint + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS) --создаем нового пацыка по трем аргументам ( имя покойного ,адрес дома ,true,nil,nil,команда терпилы)
+  		    
+        --GameRules:SetSafeToLeave( true )
+        --GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
   	    end)
 
 	end
@@ -90,9 +129,21 @@ function Spawn:FirstSpawnBoss( keys )
 
 	local unit = CreateUnitByName(name, spawnPosition1 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
 
-	local name2 = "npc_boss2" 
+	local name = "npc_boss2" 
 	local spawnPosition2 = Entities:FindByName(nil, "spawner_boss_2"):GetAbsOrigin()
-	local unit = CreateUnitByName(name2, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
+	local unit = CreateUnitByName(name, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
+
+	local name = "npc_boss3" 
+	local spawnPosition2 = Entities:FindByName(nil, "spawner_boss_3"):GetAbsOrigin()
+	local unit = CreateUnitByName(name, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
+
+	local name = "npc_boss4" 
+	local spawnPosition2 = Entities:FindByName(nil, "spawner_boss_4"):GetAbsOrigin()
+	local unit = CreateUnitByName(name, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
+
+	local name = "npc_boss5" 
+	local spawnPosition2 = Entities:FindByName(nil, "spawner_boss_5"):GetAbsOrigin()
+	local unit = CreateUnitByName(name, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
 
 end
 

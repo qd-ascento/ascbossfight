@@ -1,0 +1,6 @@
+<root>
+
+	<Panel>
+		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/donate.xml" />
+	</Panel>
+</root>

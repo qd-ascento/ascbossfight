@@ -8,9 +8,6 @@
 		</Panel>
 		<Panel hittest="false" style="visibility: collapse;">
 
-			<Image src="file://{images}/heroes/npc_dota_hero_saitama.png" />
-			<Image src="file://{images}/heroes/selection/npc_dota_hero_saitama.png" />
-			<Image src="file://{images}/heroes/icons/npc_dota_hero_saitama.png" />
 		</Panel>
 		<Panel id="TitlePanel">
 			<Label id="AddonTitle" text="#addon_game_name" style="" />

@@ -1,8 +1,8 @@
 require('spawn')
 require('timers')
 require('physics')
+require('donate')
 --require('abilities')
-require('tp')
 
 local requirements = {
 	"ai/neutral",
@@ -71,7 +71,6 @@ function Precache( context )
 end
 
 local modifiers = {
-	modifier_saitama_limiter = "heroes/hero_saitama/modifier_saitama_limiter",
 	modifier_golden_boss = "heroes/boss/golden_boss",
 	modifier_exp_boss = "heroes/boss/exp_boss",
 	modifier_str_auto = "items/items_shards",
@@ -174,4 +173,8 @@ end
 function Activate()
 	GameRules.AddonTemplate = CAddonTemplateGameMode()
 	GameRules.AddonTemplate:InitGameMode()
+end
+
+function teleport_names()
+   GameEvents.SendCustomGameEventToServer("DonateToggleButtonActivate")
 end

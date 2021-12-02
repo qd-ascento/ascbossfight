@@ -76,37 +76,32 @@ function modifier_golden_boss:OnAttackLanded(data)
 
 			if gold_now < 500000 then
 
-				if goldDamage > 100 then
+				if goldDamage > 100 and target:GetUnitName() == "npc_boss1" then
 
 					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 100)
 
-				else
-
-					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
-
-				end
-
-			end
-	end
-
-		if parent == attacker and attacker:IsRealHero() and not attacker:IsIllusion() and target:GetUnitName() == "npc_boss2" then
-
-		local gold_now = attacker:GetModifierStackCount("modifier_golden_boss", ability)
-
-			if gold_now < 500000 then
-
-				if goldDamage > 200 then
+				elseif goldDamage > 200 and target:GetUnitName() == "npc_boss2"
 
 					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 200)
 
-				else
+				elseif goldDamage > 300 and target:GetUnitName() == "npc_boss3"
+
+					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 300)
+
+				elseif goldDamage > 400 and target:GetUnitName() == "npc_boss4"
+
+					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 400)
+
+				elseif goldDamage > 500 and target:GetUnitName() == "npc_boss5"
 
 					attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
 
 				end
+				--attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
 
 			end
 	end
+
 end
 
 

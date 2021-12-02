@@ -4,10 +4,13 @@
 	"Tokens"
 	{		
 		"addon_game_name"			"ASCENTO BOSS FIGHT"
-		"addon_game_version"			"beta 0.1"
+		"addon_game_version"			"beta 0.2"
 
 		"npc_boss1"												"Первый босс"
 		"npc_boss2"												"Второй босс"
+		"npc_boss3"												"Третий босс"
+		"npc_boss4"												"Четвертый босс"
+		"npc_boss5"												"Пятый босс"
 		"DOTA_Tooltip_ability_golden_boss"						"Боевой опыт"
 		"DOTA_Tooltip_ability_golden_boss_Note0"						"Тут должно было быть что-то полезное, но пока что не завезли."
 		"DOTA_Tooltip_ability_golden_boss_Description"			"Каждая единица нанесенного урона принесет 1 боевое очко <br><br>Но не более 100 очков за удар"
@@ -34,21 +37,47 @@
 		"DOTA_Tooltip_ability_up_int_cost"					"Стоимость: "
 
 
+		"donate_list_name_artifacts"								"Телепорты на боссов"
+		"donate_list_name_heroes"								"Телепорт домой и в город"
+
+		"teleport_boss1"								"Телепорт"
+		"teleport_boss1_Description"					"Телепортирует вас в локацию первого босса"
+
+		"item_teleport_boss1"								"Телепорт"
+		"item_teleport_boss1_Description"					"Телепортирует вас в локацию первого босса"
+
+
+		"teleport_boss1_npedesc1"						"Телепортирует вас в локацию первого босса"
+		"teleport_boss1_note1"							"Телепортирует вас в локацию первого босса"
+		"teleport_boss2"								"Телепорт"
+		"teleport_boss2_Description"					"Телепортирует вас в локацию второго босса"
+		"teleport_boss3"								"Телепорт"
+		"teleport_boss3_Description"					"Телепортирует вас в локацию третьего босса"
+		"teleport_boss4"								"Телепорт"
+		"teleport_boss4_Description"					"Телепортирует вас в локацию четвертого босса"
+		"teleport_boss5"								"Телепорт"
+		"teleport_boss5_Description"					"Телепортирует вас в локацию пятого (последнего) босса"
+		"teleport_spawn"								"Телепорт"
+		"teleport_spawn_Description"					"Телепортирует вас домой"
+		"teleport_city"									"Телепорт"
+		"teleport_city_Description"						"Телепортирует вас в город, где можно (будет) взять квесты и пофармить нейтральных крипов (для нейтральных шмоток офкорс)"
 
 		"npc_dota_hero_johny"				"Крип-крипочек"
 		"npc_dota_hero_johny_npedesc1"		"Крип - смелый крип-крипочек, идёт напролом защищая своих близких глядя страху в лицо."
 		
-		"npc_dota_hero_bob"				"May"
-		"npc_dota_hero_bob_npedesc1"		"May выходец из монстров, его удара бояться все живые существа, он обладает нечеловеческой силой."
+		"npc_dota_hero_may"					"May"
+		"npc_dota_hero_may_npedesc1"		"May выходец из монстров, его удара бояться все живые существа, он обладает нечеловеческой силой."
 
 
-		"npc_dota_hero_bob"				"Боб"
+		"npc_dota_hero_bob"					"Боб"
 		"npc_dota_hero_bob_npedesc1"		"Однажды он был простым лесным крипом, но обрел разум и начал развиваться. Надежный защитник для своей команды."
 
 
 		"npc_dota_hero_jane"				"Джейн"
 		"npc_dota_hero_jane_npedesc1"		"Джейн была рождена, чтобы помогать своим товарищам. После позорного поражения от рук героев - она переродилась и с новыми силами готова свергнуть богов вместе со своей командой."
 
+		"npc_dota_hero_son"					"성진우"
+		"npc_dota_hero_son_npedesc1"		"Самый слабый охотник в мире"
 
 		"npc_dota_hero_saitama"										"Saitama"
 		"npc_dota_hero_saitama_npedesc1"							"Внешность бывает обманчива. Проходя через жестокие тренировки, Сайтама разрушает лимит своих сил, что позволяет ему преумножать их. Хватит ли у вас воли, чтобы пройти их до конца?"

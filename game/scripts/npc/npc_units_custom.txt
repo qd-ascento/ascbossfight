@@ -252,8 +252,232 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}		
 
+"npc_boss3"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/broodmother/spiderling/the_glacial_creeper_creepling/the_glacial_creeper_creepling.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creep_neutral"
+		"UnitLabel"         		"npc_boss1"
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"100"
+		"IsAncient"					"1"
+		"ModelScale" 				"3"
+		"IsNeutralUnitType"			"0"
 
+		// Abilities
+		//----------------------------------------------------------------
+		//"Ability1"					"golden_boss"			// Ability 1
+		//"Ability2"					"frostmourne_datadriven"			// Ability 2
+		//"Ability3"					""			// Ability 3
+		//"Ability4"					""			// Ability 4
 
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1000"			// Physical protection.
+		"MagicalResistance"			"100"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"500"		// Damage range min.
+		"AttackDamageMax"			"500"		// Damage range max.	
+		"AttackRate"				"0.4"			// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"200"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"220"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"5000"		// Experience earn.
+		"BountyGoldMin"				"2000"		// Gold earned min.
+		"BountyGoldMax"				"5000"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"800"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"500000"		// Base health.
+		"StatusHealthRegen"			"600"		// Health regeneration rate.
+		"StatusMana"				"5000"		// Base mana.
+		"StatusManaRegen"			"50"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"							// Team name.
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}		
+	"npc_boss4"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"		"models/heroes/pudge/pudge.vmdl"
+		"IdleExpression"		"scenes/pudge/pudge_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Pudge"
+		"PickSound"		"pudge_pud_spawn_10"
+		"BanSound"		"pudge_pud_anger_01"
+		"IdleSoundLoop"		"Hero_Pudge.IdleLoop"
+		
+		"BaseClass"					"npc_dota_creep_neutral"
+		"UnitLabel"         		"npc_boss1"
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"100"
+		"IsAncient"					"1"
+		"ModelScale" 				"3"
+		"IsNeutralUnitType"			"0"
+
+		// Abilities
+		//----------------------------------------------------------------
+		//"Ability1"					"golden_boss"			// Ability 1
+		//"Ability2"					"frostmourne_datadriven"			// Ability 2
+		//"Ability3"					""			// Ability 3
+		//"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1500"			// Physical protection.
+		"MagicalResistance"			"100"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"500"		// Damage range min.
+		"AttackDamageMax"			"500"		// Damage range max.	
+		"AttackRate"				"0.4"			// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"200"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"220"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"5000"		// Experience earn.
+		"BountyGoldMin"				"2000"		// Gold earned min.
+		"BountyGoldMax"				"5000"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"800"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"700000"		// Base health.
+		"StatusHealthRegen"			"800"		// Health regeneration rate.
+		"StatusMana"				"5000"		// Base mana.
+		"StatusManaRegen"			"50"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"							// Team name.
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}		
+
+"npc_boss5"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/broodmother/spiderling/the_glacial_creeper_creepling/the_glacial_creeper_creepling.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creep_neutral"
+		"UnitLabel"         		"npc_boss1"
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"100"
+		"IsAncient"					"1"
+		"ModelScale" 				"3"
+		"IsNeutralUnitType"			"0"
+
+		// Abilities
+		//----------------------------------------------------------------
+		//"Ability1"					"golden_boss"			// Ability 1
+		//"Ability2"					"frostmourne_datadriven"			// Ability 2
+		//"Ability3"					""			// Ability 3
+		//"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"2000"			// Physical protection.
+		"MagicalResistance"			"100"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"500"		// Damage range min.
+		"AttackDamageMax"			"500"		// Damage range max.	
+		"AttackRate"				"0.4"			// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"200"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"220"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"5000"		// Experience earn.
+		"BountyGoldMin"				"2000"		// Gold earned min.
+		"BountyGoldMax"				"5000"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"800"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1000000"		// Base health.
+		"StatusHealthRegen"			"1000"		// Health regeneration rate.
+		"StatusMana"				"5000"		// Base mana.
+		"StatusManaRegen"			"50"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"							// Team name.
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}		
 
 //   END
 }
