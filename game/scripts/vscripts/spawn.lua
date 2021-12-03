@@ -104,8 +104,8 @@ function Spawn:OnEntityKilled( keys )
 		Timers:CreateTimer(10, function()              --Через сколько секунд появится новый фраер(5)
   		    local unit = CreateUnitByName(name, caster_respoint + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS) --создаем нового пацыка по трем аргументам ( имя покойного ,адрес дома ,true,nil,nil,команда терпилы)
   		    
-        --GameRules:SetSafeToLeave( true )
-        --GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+        GameRules:SetSafeToLeave( true )
+        GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
   	    end)
 
 	end

@@ -76,7 +76,14 @@ function modifier_golden_boss:OnAttackLanded(data)
 
 				if gold_now < 500000 then
 
-					if goldDamage > 100 and target:GetUnitName() == "npc_boss1" then
+						if goldDamage < 100 then
+
+							if target:GetUnitName() == "npc_boss1" or target:GetUnitName() == "npc_boss2" or target:GetUnitName() == "npc_boss3" or target:GetUnitName() == "npc_boss4" or target:GetUnitName() == "npc_boss5" then
+
+								attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
+							end
+
+						elseif goldDamage > 99 and target:GetUnitName() == "npc_boss1" then
 
 						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 100)
 
