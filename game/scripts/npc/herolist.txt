@@ -2,11 +2,12 @@
 {
 		
 
-		"npc_dota_hero_johny"						"1"
+		"npc_dota_hero_johny"					"1"
 		"npc_dota_hero_bob"						"1"
-		"npc_dota_hero_jane"						"1"
-		"npc_dota_hero_may"						"1"
-		"npc_dota_hero_son"						"1"
+		"npc_dota_hero_jane"					"1"
+		"npc_dota_hero_may"						"0"
+		"npc_dota_hero_son"						"0"
+		"npc_dota_hero_ranged"					"0"
 	
 
 }

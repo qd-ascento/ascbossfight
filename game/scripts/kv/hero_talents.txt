@@ -1,0 +1,43 @@
+"TalentTree"
+{
+	"Points" // points for level up
+	{
+		"min_level" "100" 	// min level for giving points
+		"max_level" "159" 	// max level for giving points
+		"amount"	"1" 	// points per level
+		"special_levels" 	// special cases of giving points (still respects min_level and max_level)
+		{
+			"1"	"2"
+		}
+	}
+	
+	// heroes talents
+	"npc_dota_hero_johny"
+	{
+		"Physical"
+		{
+			"100"	//level required
+			{
+				"1"   "talent_bs_phys_1"
+			}
+		}
+		"Armor"
+		{
+			"100"
+			{
+				"1"   "talent_bs_armor_1"
+			}
+		}
+		"Magical"
+		{
+			"100"
+			{
+				"1"   "talent_bs_mag_1"
+			}
+		}		
+
+	}
+
+
+
+}

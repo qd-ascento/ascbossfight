@@ -11,7 +11,7 @@ up_str = class({
 		local caster = self:GetCaster()
 		--if not caster:IsTrueHero() then return end
 
-		local value = self:GetSpecialValueFor("strength")
+		--local value = self:GetSpecialValueFor("strength")
 		local cost = self:GetSpecialValueFor("cost")
 
 
@@ -19,11 +19,20 @@ up_str = class({
 			
 
 			local gold_now = caster:GetModifierStackCount("modifier_golden_boss", ability)
+			local give_gold = 0
+			local cost_points = 0
 			if cost <= gold_now then
-			caster:ModifyStrength(value)
-			caster.Additional_str = (caster.Additional_str or 0) + value
-			caster:SetModifierStackCount("modifier_golden_boss", attacker, gold_now - cost)
+			if(caster:GetStrength() < 1000000) then
 
+			give_gold = math.floor(gold_now / cost)
+			cost_points = math.floor(give_gold * cost)
+			--if cost_points <= gold_now then
+			caster:ModifyStrength(give_gold)
+			caster.Additional_str = (caster.Additional_str or 0) + give_gold
+			caster:SetModifierStackCount("modifier_golden_boss", attacker, gold_now - cost_points)
+
+			--end
+		end
 		end
 	end
 		--self:RemoveSelf()
@@ -63,7 +72,7 @@ up_agi = class({
 		local caster = self:GetCaster()
 		--if not caster:IsTrueHero() then return end
 
-		local value = self:GetSpecialValueFor("agility")
+		--local value = self:GetSpecialValueFor("agility")
 		local cost = self:GetSpecialValueFor("cost")
 
 
@@ -71,14 +80,20 @@ up_agi = class({
 			
 
 			local gold_now = caster:GetModifierStackCount("modifier_golden_boss", ability)
+			local give_gold = 0
+			local cost_points = 0
 			if cost <= gold_now then
-			caster:ModifyAgility(value)
-			caster.Additional_agi = (caster.Additional_agi or 0) + value
-			caster:SetModifierStackCount("modifier_golden_boss", attacker, gold_now - cost)
-
+				if(caster:GetAgility() < 1000000000) then
+			give_gold = math.floor(gold_now / cost)
+			cost_points = math.floor(give_gold * cost)
+			--if cost_points <= gold_now then
+			caster:ModifyAgility(give_gold)
+			caster.Additional_agi = (caster.Additional_agi or 0) + give_gold
+			caster:SetModifierStackCount("modifier_golden_boss", attacker, gold_now - cost_points)
+			--end
+		end
 		end
 	end
-		--self:RemoveSelf()
 	end
 
 		modifier_agi_auto = class({
@@ -114,7 +129,7 @@ end
 		local caster = self:GetCaster()
 		--if not caster:IsTrueHero() then return end
 
-		local value = self:GetSpecialValueFor("intelligence")
+		--local value = self:GetSpecialValueFor("intelligence")
 		local cost = self:GetSpecialValueFor("cost")
 
 
@@ -122,11 +137,18 @@ end
 			
 
 			local gold_now = caster:GetModifierStackCount("modifier_golden_boss", ability)
+			local give_gold = 0
+			local cost_points = 0
 			if cost <= gold_now then
-			caster:ModifyIntellect(value)
-			caster.Additional_int = (caster.Additional_int or 0) + value
-			caster:SetModifierStackCount("modifier_golden_boss", attacker, gold_now - cost)
-
+			if(caster:GetIntellect() < 1000000000) then
+			give_gold = math.floor(gold_now / cost)
+			cost_points = math.floor(give_gold * cost)
+			--if cost_points <= gold_now then
+			caster:ModifyIntellect(give_gold)
+			caster.Additional_int = (caster.Additional_int or 0) + give_gold
+			caster:SetModifierStackCount("modifier_golden_boss", attacker, gold_now - cost_points)
+			--end
+		end
 		end
 	end
 		--self:RemoveSelf()

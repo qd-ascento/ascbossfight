@@ -10,6 +10,7 @@ function Spawn:InitGameMode()
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(Spawn, 'OnEntityKilled'), self)
 	ListenToGameEvent('dota_player_gained_level', Dynamic_Wrap(Spawn, 'OnPlayerLevelUp'), self)
   ListenToGameEvent('entity_hurt', Dynamic_Wrap(Spawn, 'OnEntityHurt'), self)
+	ListenToGameEvent('npc_spawned', Dynamic_Wrap(Spawn, 'OnNPCSpawned'), self)
 
 end
 
@@ -27,6 +28,20 @@ function Spawn:OnPlayerLevelUp( keys )
 	end
 	
 end
+
+function Spawn:OnNPCSpawned( keys )
+hero = EntIndexToHScript(keys.entindex)
+if hero:GetUnitName() == "npc_dota_hero_medusa" then
+           SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/windrunner/arc_of_the_northern_wind/arc_of_the_northern_wind.vmdl"}):FollowEntity(hero, true)
+           SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/windrunner/windrunner_cape.vmdl"}):FollowEntity(hero, true)
+           SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/windrunner/windrunner_head.vmdl"}):FollowEntity(hero, true)
+           SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/windrunner/windrunner_quiver.vmdl"}):FollowEntity(hero, true)
+           SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/windrunner/windrunner_shoulderpads.vmdl"}):FollowEntity(hero, true)
+
+
+          
+end
+end
 	
 function Spawn:OnGameRulesStateChange( keys )
 	local newState = GameRules:State_Get()
@@ -34,8 +49,6 @@ function Spawn:OnGameRulesStateChange( keys )
 
 	if newState == DOTA_GAMERULES_STATE_PRE_GAME then
 		Spawn:FirstSpawnBoss()
-		Spawn:SpawnDummy()
-		--Spawn:SpawnBonusBox()
 	end
 end
 
@@ -56,9 +69,7 @@ function Spawn:OnEntityKilled( keys )
 
   	    end)
 
-	end
-
-	if name == "npc_boss2" then
+	elseif name == "npc_boss2" then
 
 
 		local caster_respoint = Entities:FindByName(nil,"spawner_boss_2"):GetAbsOrigin() --Пробиваем адрес дома
@@ -69,9 +80,7 @@ function Spawn:OnEntityKilled( keys )
         --GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
   	    end)
 
-	end
-
-		if name == "npc_boss3" then
+	elseif name == "npc_boss3" then
 
 
 		local caster_respoint = Entities:FindByName(nil,"spawner_boss_3"):GetAbsOrigin() --Пробиваем адрес дома
@@ -82,9 +91,8 @@ function Spawn:OnEntityKilled( keys )
         --GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
   	    end)
 
-	end
+	elseif name == "npc_boss4" then
 
-		if name == "npc_boss4" then
 
 
 		local caster_respoint = Entities:FindByName(nil,"spawner_boss_4"):GetAbsOrigin() --Пробиваем адрес дома
@@ -95,9 +103,7 @@ function Spawn:OnEntityKilled( keys )
         --GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
   	    end)
 
-	end
-
-		if name == "npc_boss5" then
+	elseif name == "npc_boss5" then
 
 
 		local caster_respoint = Entities:FindByName(nil,"spawner_boss_5"):GetAbsOrigin() --Пробиваем адрес дома
@@ -108,9 +114,7 @@ function Spawn:OnEntityKilled( keys )
         GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
   	    end)
 
-	end
-
-		if name == "npc_dummy_unit" then
+	elseif name == "npc_dummy_unit" then
 
 
 		local caster_respoint = Entities:FindByName(nil,"spawner_dummy"):GetAbsOrigin() --Пробиваем адрес дома
@@ -119,42 +123,39 @@ function Spawn:OnEntityKilled( keys )
 
   	    end)
 
+
 	end
 end
 
 function Spawn:FirstSpawnBoss( keys )
-
 	local name = "npc_boss1" 
 	local spawnPosition1 = Entities:FindByName(nil, "spawner_boss_1"):GetAbsOrigin()
 
 	local unit = CreateUnitByName(name, spawnPosition1 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
 
 	local name = "npc_boss2" 
-	local spawnPosition2 = Entities:FindByName(nil, "spawner_boss_2"):GetAbsOrigin()
-	local unit = CreateUnitByName(name, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
-
-	local name = "npc_boss3" 
-	local spawnPosition2 = Entities:FindByName(nil, "spawner_boss_3"):GetAbsOrigin()
-	local unit = CreateUnitByName(name, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
-
-	local name = "npc_boss4" 
-	local spawnPosition2 = Entities:FindByName(nil, "spawner_boss_4"):GetAbsOrigin()
-	local unit = CreateUnitByName(name, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
-
-	local name = "npc_boss5" 
-	local spawnPosition2 = Entities:FindByName(nil, "spawner_boss_5"):GetAbsOrigin()
-	local unit = CreateUnitByName(name, spawnPosition2 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
-
-end
-
-function Spawn:SpawnDummy( keys )
-
-	local name = "npc_dummy_unit" 
-	local spawnPosition1 = Entities:FindByName(nil, "spawner_dummy"):GetAbsOrigin()
-
+	local spawnPosition1 = Entities:FindByName(nil, "spawner_boss_2"):GetAbsOrigin()
 	local unit = CreateUnitByName(name, spawnPosition1 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
 
+	local name = "npc_boss3" 
+	local spawnPosition1 = Entities:FindByName(nil, "spawner_boss_3"):GetAbsOrigin()
+	local unit = CreateUnitByName(name, spawnPosition1 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
+	
+	local name = "npc_boss4" 
+	local spawnPosition1 = Entities:FindByName(nil, "spawner_boss_4"):GetAbsOrigin()
+	local unit = CreateUnitByName(name, spawnPosition1 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
+
+	local name = "npc_boss5" 
+	local spawnPosition1 = Entities:FindByName(nil, "spawner_boss_5"):GetAbsOrigin()
+	local unit = CreateUnitByName(name, spawnPosition1 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
+	
+	local name = "npc_dummy_unit" 
+	local spawnPosition1 = Entities:FindByName(nil, "spawner_dummy"):GetAbsOrigin()
+	local unit = CreateUnitByName(name, spawnPosition1 + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS)
+
+
 end
+
 
 				--GameRules:SendCustomMessage("#Game_notification_",0,0)
 function Spawn:DropItem( unit, item_name, chance )

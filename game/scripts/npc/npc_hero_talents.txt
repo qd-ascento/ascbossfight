@@ -1,0 +1,114 @@
+""
+{
+	//Talents
+
+	"talent_bs_phys_1" 
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"bs/phys"
+		"MaxLevel"						"20"
+		"IsOnCastBar"					"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"45 52 71 121 156 214 230 307 363 416 473 482 548 623 689 690 712 753 931 1000"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_talent_bs_phys_1"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"%damage"
+				}
+			}
+		}
+	}
+
+	"talent_bs_armor_1" 
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"bs/armor"
+		"MaxLevel"						"20"
+		"IsOnCastBar"					"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"					"1 17 27 58 75 79 118 127 130 272 312 323 334 337 342 357 361 421 445 500"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_talent_bs_armor_1"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+				}
+			}
+		}
+	}
+	
+	"talent_bs_mag_1" 
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"bs/mag"
+		"MaxLevel"						"20"
+		"IsOnCastBar"					"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amplify"			"6 11 20 24 39 57 76 89 103 124 143 155 159 164 172 181 184 186 188 200"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_talent_bs_mag_1"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amplify"
+				}
+			}
+		}		
+	}	
+
+	//End Talents
+}

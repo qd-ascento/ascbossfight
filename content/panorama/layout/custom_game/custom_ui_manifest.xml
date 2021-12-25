@@ -1,6 +1,7 @@
 <root>
 
 	<Panel>
-		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/donate.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/donate.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/talent_tree/window.xml" />
 	</Panel>
 </root>

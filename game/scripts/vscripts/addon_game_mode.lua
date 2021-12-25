@@ -2,13 +2,18 @@ require('spawn')
 require('timers')
 require('physics')
 require('donate')
---require('abilities')
+require("talent_tree")
+require('hero_selection')
+require("item_drop")
 
 local requirements = {
-	"ai/neutral",
+	--"ai/neutral",
+	--"libraries/CosmeticLib"
 --	"data/kv_data",
 }
 
+
+_G.STATE_HERO_SELECTION = 2
 
 ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned
 UNIVERSAL_SHOP_MODE = true             -- Should the main shop contain Secret Shop items as well as regular items
@@ -48,7 +53,7 @@ REMOVE_ILLUSIONS_ON_DEATH = false       -- Should we remove all illusions if the
 DISABLE_GOLD_SOUNDS = false             -- Should we disable the gold sound when players get gold?
 
 USE_CUSTOM_HERO_LEVELS = true           -- Should we allow heroes to have custom levels?
-MAX_LEVEL = 1500                          -- What level should we let heroes get to?
+MAX_LEVEL = 999                          -- What level should we let heroes get to?
 USE_CUSTOM_XP_VALUES = true             -- Should we use custom XP values to level up heroes, or the default Dota numbers?
 FIXED_RESPAWN_TIME = 10                 -- What time should we use for a fixed respawn timer?  Use -1 to keep the default dota behavior.
 
@@ -61,13 +66,26 @@ XP_PER_LEVEL_TABLE[1] = 100
 for i = 2, MAX_LEVEL do
   	XP_PER_LEVEL_TABLE[i] = i * (i * 200) / 2
 end
-if CAddonTemplateGameMode == nil then
-	CAddonTemplateGameMode = class({})
+if GameMode == nil then
+	GameMode = class({})
 end
 
+ --CustomGameEventManager:RegisterListener( "pick_hero_event", OnPickHero )
 
 function Precache( context )
+	--PrecacheUnitByNameAsync("npc_boss4", function(unit) end )
+	--PrecacheModel("npc_boss4", context)
+    --PrecacheResource( "model", "models/heroes/pudge/pudge.vmdl", context )
+ 
+	PrecacheResource("particle", "particles/units/heroes/hero_legion_commander/legion_weapon_blurc.vpcf", context) 
+	PrecacheResource("particle", "particles/units/heroes/hero_legion_commander/legion_weapon_blurb.vpcf", context) 
+	PrecacheResource("particle", "particles/units/heroes/hero_legion_commander/legion_weapon_blur.vpcf", context) 
+	PrecacheResource("particle", "particles/ui/ui_aghs_pregamebg_ambient_mist.vpcf", context) 
+	--PrecacheResource("particle", "", context) 
 
+	--PrecacheResource("particle", "", context) 
+	
+	
 end
 
 local modifiers = {
@@ -76,6 +94,7 @@ local modifiers = {
 	modifier_str_auto = "items/items_shards",
 	modifier_agi_auto = "items/items_shards",
 	modifier_int_auto = "items/items_shards",
+	modifier_god = "heroes/boss/god",
 	command_aura = "heroes/command_aura",
 	modifier_item_assault_enemy_aura_visible = "items/item_assault",
 	
@@ -86,16 +105,92 @@ for k,v in pairs(modifiers) do
 end
 
 
-function CAddonTemplateGameMode:OnFirstPlayerLoaded()
+function GameMode:OnFirstPlayerLoaded()
 	StatsClient:FetchPreGameData()
 end
 
-function CAddonTemplateGameMode:OnHeroSelectionEnd()
-	PanoramaShop:StartItemStocks()
+function GameMode:OnHeroSelectionEnd()
+	--PanoramaShop:StartItemStocks()
 end
 
+function GameMode:EventPlayerReconnected(args)
+    print("Player reconnected")
+    PrintTable(args)
 
-function CAddonTemplateGameMode:InitGameMode()
+    if self.HeroSelection then
+        self.HeroSelection:UpdateSelectedHeroes()
+    end
+end
+
+function GameMode:EventPlayerDisconnected(args)
+    print("Player disconnected")
+    PrintTable(args)
+
+    if self.HeroSelection then
+        self.HeroSelection:UpdateSelectedHeroes()
+    end
+end
+
+function GameMode:EventStateChanged(args)
+    local newState = GameRules:State_Get()
+
+
+    if newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+        if IsInToolsMode() then
+            Timers:CreateTimer(1, function() self:OnGameSetup() end)
+        else
+            self:OnGameSetup()
+        end
+    end
+     
+    if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+        self:OnGameInProgress()
+    end
+end
+
+function GameMode:Start()
+
+    --Quests.Init(self.Players)
+
+   -- self.chat = Chat(self.Players, self.Users, self.TeamColors)
+
+    --self.winner = nil
+
+    --self.generalStatistics = Statistics(self.Players)
+
+    self.heroSelection = HeroSelection(
+        self.Players,
+        self.AvailableHeroes,
+        self.TeamColors,
+        self.chat,
+        true,
+        self.rankedMode ~= nil
+    )
+
+
+
+    self:RegisterThinker(1,
+        function()
+            if self.State == STATE_HERO_SELECTION and self.heroSelection then
+                self.heroSelection:Update()
+            end
+        end
+    )
+
+
+    self:UpdatePlayerTable()
+    self:UpdateGameInfo()
+
+    CheckAndEnableDebug()
+
+    self:SetState(STATE_HERO_SELECTION)
+    self.heroSelection:Start(function() self:OnHeroSelectionEnd() end)
+
+end
+
+function GameMode:InitGameMode()
+
+
 
 	GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 5 )
 	GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 0 )
@@ -139,21 +234,21 @@ function CAddonTemplateGameMode:InitGameMode()
 	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_DAMAGE,0.5)
 	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_DAMAGE,0.5)
 	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_DAMAGE,0.5)
-	    mode:SetMaximumAttackSpeed( 1200 ) 
+	    mode:SetMaximumAttackSpeed( 2000 ) 
 		mode:SetMinimumAttackSpeed( 50 )
 	    --mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_STATUS_RESISTANCE_PERCENT,0)
 
-	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP,0.6)
-	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP_REGEN,0.05)
+	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP,0.5)
+	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_HP_REGEN,0.002)
 	    --mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_STATUS_RESISTANCE_PERCENT,0)
 
 
-	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR,0.05)
-	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,0.05)
+	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR,0.02)
+	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ATTACK_SPEED,0.03)
 	   -- GameMode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_MOVE_SPEED_PERCENT,0)
 
-	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA,0.4)
-	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN,0.05)
+	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA,0.2)
+	    mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN,0.0001)
 	   -- mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_SPELL_AMP_PERCENT,0)
 	    --mode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_INTELLIGENCE_MAGIC_RESISTANCE_PERCENT,0)
 
@@ -169,12 +264,7 @@ end
 
 
 
-
 function Activate()
-	GameRules.AddonTemplate = CAddonTemplateGameMode()
+	GameRules.AddonTemplate = GameMode()
 	GameRules.AddonTemplate:InitGameMode()
-end
-
-function teleport_names()
-   GameEvents.SendCustomGameEventToServer("DonateToggleButtonActivate")
 end

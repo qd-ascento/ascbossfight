@@ -6,6 +6,13 @@
 		"addon_game_name"			"ASCENTO BOSS FIGHT"
 		"addon_game_version"			"beta 0.2"
 
+		"talent_tree_column_0_title"            "Требуемый уровень"
+		"talent_tree_column_1_title"            "Маг урон"
+		"talent_tree_column_2_title"            "Физ урон"
+		"talent_tree_current_talent_points"     "Количество очков: %POINTS%"
+		"talent_tree_reset_talents"             "Сбросить таланты"
+		"talent_tree_window_button"			"Таланты"
+
 		"npc_boss1"												"Первый босс"
 		"npc_boss2"												"Второй босс"
 		"npc_boss3"												"Третий босс"

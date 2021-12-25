@@ -4,7 +4,6 @@
 "DOTAHeroes"
 {
 
-	
 
 	"npc_dota_hero_johny"
 	{
@@ -17,9 +16,15 @@
 		"SoundSet"					"n_creep_Ranged"
 		"BotImplemented"			"0"
 		"NewHero"					"1"
-		"HeroID"					"252"
+		"HeroID"					"251"
 		"ModelScale"				"1.2"
-		"Ability1"					"golden_boss"			// Ability 1
+
+		"Ability1"					"spectre_desolate"			// Ability 1
+		"Ability2"					"skeleton_king_vampiric_aura"			// Ability 1
+		"Ability3"					"juggernaut_blade_dance"			// Ability 1
+		"Ability4"					"elder_titan_natural_order"			// Ability 1
+		"Ability5"					"golden_boss"			// Ability 1
+
 		"Ability10"		"special_bonus_exp_boost_20"
 		"Ability11"		"special_bonus_movement_speed_35"
 		"Ability12"		"special_bonus_cleave_15"
@@ -110,7 +115,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"BotImplemented"			"0"
 		"NewHero"					"1"
-		"HeroID"					"249"
+		"HeroID"					"253"
 		"ModelScale"				"1.2"
 		"Ability1"					"golden_boss"			// Ability 1
 		"Ability10"		"special_bonus_exp_boost_20"
@@ -154,9 +159,16 @@
 		"BotImplemented"			"0"
 		"NewHero"					"1"
 		"SoundSet"					"Hero_ogr_magi"
-		"HeroID"					"251"
+		"HeroID"					"254"
 		"ModelScale"				"1.2"
-		"Ability1"					"golden_boss"			// Ability 1
+
+		"Ability1"					"huskar_inner_vitality"			// Ability 1 
+		"Ability2"					"huskar_berserkers_blood"			// Ability 1 
+		"Ability3"					"spectre_dispersion"			// Ability 1 
+		"Ability4"					"centaur_return"			// Ability 1 
+		"Ability5"					"pudge_dismember"			// Ability 1 
+		"Ability6"					"golden_boss"			// Ability 1 
+
 		"Ability10"		"special_bonus_exp_boost_20"
 		"Ability11"		"special_bonus_gold_income_10"
 		"Ability12"		"special_bonus_armor_5"
@@ -199,15 +211,16 @@
 		"Enabled"					"1"
 		"BotImplemented"			"0"
 		"NewHero"					"1"
-		"HeroID"					"250"
+		"HeroID"					"255"
 		"ModelScale"				"1.2"
 		"Ability1"					"nevermore_dark_lord"			// Ability 1
 		"Ability2"					"shallow_grave_datadriven"			// Ability 2
 		"Ability3"					"vengefulspirit_command_aura_datadriven"			// Ability 3
-		"Ability4"					"empower_datadriven"			// Ability 3
+		"Ability4"					"empower_datadriven"			// Ability 3 
 		
 
-		"Ability5"					"golden_boss"			// Ability 4
+		"Ability5"					"juggernaut_healing_ward"			// Ability 4
+		"Ability6"					"golden_boss"			// Ability 4
 
 		"Ability10"		"special_bonus_exp_boost_20"
 		"Ability11"		"special_bonus_mp_regen_5"

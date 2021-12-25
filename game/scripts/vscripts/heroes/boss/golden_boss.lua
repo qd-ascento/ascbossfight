@@ -32,18 +32,8 @@ modifier_golden_boss = class({
 	DeclareFunctions = function(self) return {
 		MODIFIER_EVENT_ON_ATTACK_LANDED,
 		MODIFIER_EVENT_ON_CREATED,
-		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL,
-		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE,
 	}end,
 })
-----------------------------------------------------------
-function modifier_golden_boss:GetAbsoluteNoDamageMagical()
-	return 1
-end
--------------------------------------------------------
-function modifier_golden_boss:GetAbsoluteNoDamagePure()
-	return 1
-end
 
 ----------------------------------------------
 	function modifier_golden_boss:OnCreated()
@@ -74,7 +64,13 @@ function modifier_golden_boss:OnAttackLanded(data)
 
 				local gold_now = attacker:GetModifierStackCount("modifier_golden_boss", ability)
 
-				if gold_now < 500000 then
+				if gold_now < 1000000 then
+
+					--if target:GetUnitName() == "npc_dota_badguys_tower1_top" then
+
+						--attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
+						
+						--end
 
 						if goldDamage < 100 then
 
@@ -83,7 +79,9 @@ function modifier_golden_boss:OnAttackLanded(data)
 								attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
 							end
 
-						elseif goldDamage > 99 and target:GetUnitName() == "npc_boss1" then
+
+
+						elseif goldDamage > 100 and target:GetUnitName() == "npc_boss1" then
 
 						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 100)
 
@@ -102,6 +100,8 @@ function modifier_golden_boss:OnAttackLanded(data)
 						elseif goldDamage > 500 and target:GetUnitName() == "npc_boss5" then
 
 						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
+
+
 
 					end	
 				end

@@ -1,4 +1,4 @@
-#base "heroes/saitama.txt"
+#base "npc_hero_talents.txt"
 // Dota Heroes File
 "DOTAAbilities"
 {
@@ -31,6 +31,13 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"MaxLevel"						"0"
 		"AbilityTextureName" 			"rubick_empty1"
+	}
+
+	"god"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/boss/god.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	}
 
 "exp_boss"
