@@ -22,7 +22,12 @@ up_str = class({
 			local give_gold = 0
 			local cost_points = 0
 			if cost <= gold_now then
-			if(caster:GetStrength() < 1000000) then
+			if(caster:GetStrength() < 100000000) then
+
+				if(caster:GetStrength() > 50000000) then
+					caster:SetMaxHealth(2000000000)
+					caster:SetHealth(2000000000)
+				end
 
 			give_gold = math.floor(gold_now / cost)
 			cost_points = math.floor(give_gold * cost)

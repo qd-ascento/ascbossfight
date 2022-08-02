@@ -25,7 +25,7 @@ function DonatePanelUpdate( table, id, lists ) {
 				var items = lists[name]
 				// var list_panel = $.CreatePanel( "Panel", panel, "" )
 				var list_name = $.CreatePanel( "Label", panel, "" )
-				list_name.text = $.Localize( "donate_list_name_" + name )
+				list_name.text = $.Localize( "Телепорты на " + name )
 				list_name.AddClass( "ListName" )
 				var list = $.CreatePanel( "Panel", panel, "" )
 				list.AddClass( "DonateItemsList" )

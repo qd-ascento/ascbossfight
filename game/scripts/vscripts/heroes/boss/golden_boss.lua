@@ -54,58 +54,97 @@ function modifier_golden_boss:OnAttackLanded(data)
 	local attacker = data.attacker
 	local ability = data.ability
 	local goldDamage = data.damage
+	local gold_now = attacker:GetModifierStackCount("modifier_golden_boss", ability)
+	local addGold = 0
 
-		local parent = self:GetParent()
-		if not parent:HasModifier("modifier_golden_boss") then
-			parent:AddNewModifier(parent, self:GetAbility(), "modifier_golden_boss", nil)
+	if gold_now < 0 then
+		attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now*0)
+	end
+
+	local parent = self:GetParent()
+	if not parent:HasModifier("modifier_golden_boss") then
+		parent:AddNewModifier(parent, self:GetAbility(), "modifier_golden_boss", nil)
+	end
+
+	if parent == attacker and attacker:IsRealHero() and not attacker:IsIllusion() then
+
+				--if target:GetUnitName() == "npc_dota_badguys_tower1_top" then
+
+					--attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
+				
+				--end
+
+		if gold_now <= 1000000 then
+
+			if target:GetUnitName() == "npc_boss1" then
+
+				if goldDamage <= 200 then
+					addGold = goldDamage
+				else
+					addGold = 200
+				end
+
+				attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + addGold)
+
+			end
+
+			if target:GetUnitName() == "npc_boss2" then
+
+				if goldDamage <= 1000 then
+					addGold = goldDamage
+				else
+					addGold = 1000
+				end
+
+				attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + addGold)
+				
+			end
+
+			if target:GetUnitName() == "npc_boss3" then
+
+				if goldDamage <= 3000 then
+					addGold = goldDamage
+				else
+					addGold = 3000
+				end
+
+				attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + addGold)
+				
+			end
+
+			if target:GetUnitName() == "npc_boss4" then
+
+				if goldDamage <= 6800 then
+					addGold = goldDamage
+				else
+					addGold = 6800
+				end
+
+				attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + addGold)
+				
+			end
+
+			if target:GetUnitName() == "npc_boss5" then
+
+				if goldDamage <= 13000 then
+					addGold = goldDamage
+				else
+					addGold = 13000
+				end
+
+				attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + addGold)
+				
+			end
+
 		end
 
-			if parent == attacker and attacker:IsRealHero() and not attacker:IsIllusion() then
+		if gold_now > 1000000 then
 
-				local gold_now = attacker:GetModifierStackCount("modifier_golden_boss", ability)
+			attacker:SetModifierStackCount("modifier_golden_boss", attacker, 1000000)
 
-				if gold_now < 1000000 then
+		end
 
-					--if target:GetUnitName() == "npc_dota_badguys_tower1_top" then
-
-						--attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
-						
-						--end
-
-						if goldDamage < 100 then
-
-							if target:GetUnitName() == "npc_boss1" or target:GetUnitName() == "npc_boss2" or target:GetUnitName() == "npc_boss3" or target:GetUnitName() == "npc_boss4" or target:GetUnitName() == "npc_boss5" then
-
-								attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
-							end
-
-
-
-						elseif goldDamage > 100 and target:GetUnitName() == "npc_boss1" then
-
-						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 100)
-
-						elseif goldDamage > 200 and target:GetUnitName() == "npc_boss2" then
-
-						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 200)
-
-						elseif goldDamage > 300 and target:GetUnitName() == "npc_boss3" then
-
-						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 300)
-
-						elseif goldDamage > 400 and target:GetUnitName() == "npc_boss4" then
-
-						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + 400)
-
-						elseif goldDamage > 500 and target:GetUnitName() == "npc_boss5" then
-
-						attacker:SetModifierStackCount("modifier_golden_boss", attacker, gold_now + goldDamage)
-
-
-
-					end	
-				end
-			end
+	end
 
 end
 

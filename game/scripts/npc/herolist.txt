@@ -8,6 +8,9 @@
 		"npc_dota_hero_may"						"0"
 		"npc_dota_hero_son"						"0"
 		"npc_dota_hero_ranged"					"0"
+		"npc_dota_hero_juggernaut"				"1"
+		"npc_dota_hero_sven"					"0"
+		"npc_dota_hero_lone_druid"					"0"
 	
 
 }

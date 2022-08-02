@@ -58,7 +58,7 @@ DONATE_ITEM_APEX = {
 
 
 DONATE_ITEMS = {
-	heroes = {
+	города = {
 
 		{
 			name = "item_teleport_spawn",
@@ -82,7 +82,7 @@ DONATE_ITEMS = {
 
 
 	},
-	artifacts = {
+	боссов = {
 
 
 				{
@@ -267,6 +267,10 @@ function Donate:OnNPCSpawned(keys)
 --	
 	
 		addModifierBySteamID(DONATE_SET_PREMIUM_1.players,"modifier_special_effect_legendary",steamID,npc)
+
+		   GameRules:SendCustomMessage("<font color='#ff0000'>Добро пожаловать в Ascento Boss Fight</font>. Вы можете получать опыт, атакуя куклу на спавне или же сразу отправиться к <font color='#0050ff'>БОССАМ</font>. Телепорты к ним расположены в верхнем левом углу (<font color='#ff0000'>ИКОНКА СВИТКА ТЕЛЕПОРТАЦИИ</font>)",1,0)
+
+
 --		addModifierBySteamID(				
 		
 		if not FirstSpawned[playerID] then

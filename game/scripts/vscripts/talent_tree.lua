@@ -206,6 +206,7 @@ function TalentTree:SetHeroTalentLevel(hero, talentId, level)
 		-- remove
         if (level == 0) then
             if (hero.talents.abilities[talentId]) then
+                hero.talents.abilities[talentId]:SetLevel(level)
                 hero.talents.abilities[talentId]:GetCaster():RemoveAbilityByHandle(hero.talents.abilities[talentId])
                 hero.talents.abilities[talentId] = nil
             end
@@ -213,6 +214,7 @@ function TalentTree:SetHeroTalentLevel(hero, talentId, level)
         else
             if (not hero.talents.abilities[talentId]) then
                 hero.talents.abilities[talentId] = hero:AddAbility(TalentTree.talentsData[talentId].Ability)
+                hero.talents.abilities[talentId]:SetLevel(level)
             end
             if(hero.talents.abilities[talentId]) then
                 hero.talents.abilities[talentId]:SetLevel(level)
@@ -296,6 +298,7 @@ function TalentTree:OnTalentTreeResetRequest(event)
     for i = 1, TalentTree:GetLatestTalentID() do
         pointsToReturn = pointsToReturn + TalentTree:GetHeroTalentLevel(hero, i)
         TalentTree:SetHeroTalentLevel(hero, i, 0)
+
     end
     TalentTree:AddTalentPointsToHero(hero, pointsToReturn)
 end
@@ -327,6 +330,7 @@ function TalentTree:OnTalentTreeLevelUpRequest(event)
         local talentLvl = TalentTree:GetHeroTalentLevel(hero, talentId)
         TalentTree:AddTalentPointsToHero(hero, -1)
         TalentTree:SetHeroTalentLevel(hero, talentId, talentLvl + 1)
+        
     end
 end
 

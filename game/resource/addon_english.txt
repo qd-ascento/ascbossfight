@@ -6,12 +6,34 @@
 		"addon_game_name"			"ASCENTO BOSS FIGHT"
 		"addon_game_version"			"beta 0.2"
 
-		"talent_tree_column_0_title"            "Требуемый уровень"
-		"talent_tree_column_1_title"            "Маг урон"
-		"talent_tree_column_2_title"            "Физ урон"
-		"talent_tree_current_talent_points"     "Количество очков: %POINTS%"
-		"talent_tree_reset_talents"             "Сбросить таланты"
-		"talent_tree_window_button"			"Таланты"
+		"talent_tree_column_0_title"            "Level Req"
+		"talent_tree_column_1_title"            "Spell Amp"
+		"talent_tree_column_2_title"            "Damage"
+		"talent_tree_column_3_title"            "Armor"
+		"talent_tree_current_talent_points"     "Points: %POINTS%"
+		"talent_tree_reset_talents"             "Reset talents"
+		"talent_tree_window_button"			"Talents"
+
+		"DOTA_Tooltip_ability_talent_bs_phys_1"					"Bonus Damage LVL1"
+		"DOTA_Tooltip_ability_talent_bs_phys_1_damage"			"+$damage"
+		"DOTA_Tooltip_ability_talent_bs_armor_1"				"Bonus Armor LVL1"
+		"DOTA_Tooltip_ability_talent_bs_armor_1_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_talent_bs_mag_1"					"Spell Amp LVL1"
+		"DOTA_Tooltip_ability_talent_bs_mag_1_spell_amplify"			"%+$spell_amp"
+
+		"DOTA_Tooltip_ability_talent_bs_phys_2"					"Bonus Damage LVL2"
+		"DOTA_Tooltip_ability_talent_bs_phys_2_damage"			"+$damage"
+		"DOTA_Tooltip_ability_talent_bs_armor_2"				"Bonus Armor LVL2"
+		"DOTA_Tooltip_ability_talent_bs_armor_2_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_talent_bs_mag_2"					"Spell Amp LVL2"
+		"DOTA_Tooltip_ability_talent_bs_mag_2_spell_amplify"			"%+$spell_amp"
+
+		"DOTA_Tooltip_ability_talent_bs_phys_3"					"Bonus Damage LVL3"
+		"DOTA_Tooltip_ability_talent_bs_phys_3_damage"			"+$damage"
+		"DOTA_Tooltip_ability_talent_bs_armor_3"				"Bonus Armor LVL3"
+		"DOTA_Tooltip_ability_talent_bs_armor_3_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_talent_bs_mag_3"					"Spell Amp LVL3"
+		"DOTA_Tooltip_ability_talent_bs_mag_3_spell_amplify"			"%+$spell_amp"
 
 		"npc_boss1"												"Первый босс"
 		"npc_boss2"												"Второй босс"
@@ -44,8 +66,8 @@
 		"DOTA_Tooltip_ability_up_int_cost"					"Стоимость: "
 
 
-		"donate_list_name_artifacts"								"Телепорты на боссов"
-		"donate_list_name_heroes"								"Телепорт домой и в город"
+		"#donate_list_name_artifacts"								"Телепорты на боссов"
+		"#donate_list_name_heroes"								"Телепорт домой и в город"
 
 		"DOTA_Tooltip_ability_item_teleport_boss1"									"Телепорт босс 1"
 		"DOTA_Tooltip_ability_item_teleport_boss1_Description"					"Телепортирует вас в локацию первого босса"

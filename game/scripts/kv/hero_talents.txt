@@ -20,12 +20,28 @@
 			{
 				"1"   "talent_bs_phys_1"
 			}
+			"120"	//level required
+			{
+				"1"   "talent_bs_phys_2"
+			}
+			"140"	//level required
+			{
+				"1"   "talent_bs_phys_3"
+			}
 		}
 		"Armor"
 		{
 			"100"
 			{
 				"1"   "talent_bs_armor_1"
+			}
+			"120"
+			{
+				"1"   "talent_bs_armor_2"
+			}
+			"140"
+			{
+				"1"   "talent_bs_armor_3"
 			}
 		}
 		"Magical"
@@ -34,9 +50,18 @@
 			{
 				"1"   "talent_bs_mag_1"
 			}
+			"120"
+			{
+				"1"   "talent_bs_mag_2"
+			}
+			"140"
+			{
+				"1"   "talent_bs_mag_3"
+			}
 		}		
 
 	}
+
 
 
 

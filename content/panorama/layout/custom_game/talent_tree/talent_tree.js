@@ -34,7 +34,7 @@ function OnTalentsState(event) {
         talentsData[talentId].panel.SetHasClass("disabled", parsedStateData[i].disabled);
         talentsData[talentId].panel.levelLabel.text = parsedStateData[i].level + " / " + parsedStateData[i].maxlevel;
     }
-    TALENTS_LAYOUT["TalentPointsLabel"].text = $.Localize("talent_tree_current_talent_points").replace("%POINTS%", talentPoints);
+    TALENTS_LAYOUT["TalentPointsLabel"].text = $.Localize("Доступно очков таланта: %POINTS%").replace("%POINTS%", talentPoints);
 	
 	//если есть поинтов нет прячем верхнюю картинку, если есть - анонируем, простите анимируем то есть
 	var hasZeroTalentPoints = talentPoints <= 0

@@ -61,25 +61,14 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"ShouldBeSuggested"				"1"
 
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_damage"			"100"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"corruption_armor"		"-100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"corruption_duration"	"7.0"
-			}
+				"corruption_duration"	"10.0"
+				"bonus_damage_per_kill"	"10"
+				"bonus_damage_per_assist"	"5"
+				"max_damage"			"10000000"
 		}
 	}
 

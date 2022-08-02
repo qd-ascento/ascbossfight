@@ -14,6 +14,28 @@
 		"talent_tree_reset_talents"             "Сбросить таланты"
 		"talent_tree_window_button"			"Таланты"
 
+		"DOTA_Tooltip_ability_talent_bs_phys_1"					"Увеличение урона LVL1"
+		"DOTA_Tooltip_ability_talent_bs_phys_1_damage"			"+$damage"
+		"DOTA_Tooltip_ability_talent_bs_armor_1"				"Увеличение брони LVL1"
+		"DOTA_Tooltip_ability_talent_bs_armor_1_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_talent_bs_mag_1"					"Увеличение маг урона LVL1"
+		"DOTA_Tooltip_ability_talent_bs_mag_1_spell_amplify"			"%+$spell_amp"
+
+		"DOTA_Tooltip_ability_talent_bs_phys_2"					"Увеличение урона LVL2"
+		"DOTA_Tooltip_ability_talent_bs_phys_2_damage"			"+$damage"
+		"DOTA_Tooltip_ability_talent_bs_armor_2"				"Увеличение брони LVL2"
+		"DOTA_Tooltip_ability_talent_bs_armor_2_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_talent_bs_mag_2"					"Увеличение маг урона LVL2"
+		"DOTA_Tooltip_ability_talent_bs_mag_2_spell_amplify"			"%+$spell_amp"
+
+		"DOTA_Tooltip_ability_talent_bs_phys_3"					"Увеличение урона LVL3"
+		"DOTA_Tooltip_ability_talent_bs_phys_3_damage"			"+$damage"
+		"DOTA_Tooltip_ability_talent_bs_armor_3"				"Увеличение брони LVL3"
+		"DOTA_Tooltip_ability_talent_bs_armor_3_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_talent_bs_mag_3"					"Увеличение маг урона LVL3"
+		"DOTA_Tooltip_ability_talent_bs_mag_3_spell_amplify"			"%+$spell_amp"
+		
+
 		"npc_boss1"												"Первый босс"
 		"npc_boss2"												"Второй босс"
 		"npc_boss3"												"Третий босс"
